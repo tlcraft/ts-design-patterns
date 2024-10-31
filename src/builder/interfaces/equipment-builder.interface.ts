@@ -5,5 +5,6 @@ export interface EquipmentBuilder {
     setMaterial(material: string): EquipmentBuilder;
     setElement(element: string): EquipmentBuilder;
     setPower(power: number): EquipmentBuilder;
+    setBaseDetails(): EquipmentBuilder;
     build(): Equipment;
 }
