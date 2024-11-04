@@ -26,5 +26,5 @@ Here are several items and the logic for how each should be processed.
 
 ## References
 
-- [Design Pattersn Rules Enginer](https://softwarehut.com/blog/tech/design-patterns-rules-engine)
+- [Design Patterns Rules Engine](https://softwarehut.com/blog/tech/design-patterns-rules-engine)
 - [Rules Engine Pattern](https://deviq.com/design-patterns/rules-engine-pattern)
