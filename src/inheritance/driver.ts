@@ -1,45 +1,43 @@
-interface IHello {
-    hello(): void;
-}
+import { IHello } from "./interfaces/hello";
 
-abstract class Hello implements IHello {
+abstract class BaseHello implements IHello {
     hello(): void {
         console.log("Hello");
     }
 }
 
-abstract class Hello2 extends Hello {
+abstract class HelloHiAbs extends BaseHello {
     hello(): void {
-        console.log("Hello2");
+        console.log("Hello, hi!");
     }
 }
 
-class Hello2Concrete extends Hello2 {
-    
-}
-
-class HelloConcrete extends Hello {
+class HelloConcrete extends BaseHello {
 
 }
 
-class HelloConcrete2 extends Hello {
+class AltHelloConcrete extends BaseHello {
     hello(): void {
         console.log("Hi");
     }
 }
 
-class HelloConcrete3 extends Hello {
+class AnotherHelloConcrete extends BaseHello {
     hello(): void {
-        console.log("Hi, hello");
+        console.log("Hi, hello.");
         super.hello();
     }
 }
 
+class HelloHiConcrete extends HelloHiAbs {
+    
+}
+
 const driver = (): void => {
     const hello = new HelloConcrete();
-    const hello2 = new HelloConcrete2();
-    const hello3 = new HelloConcrete3();
-    const hello2nd = new Hello2Concrete();
+    const hello2 = new AltHelloConcrete();
+    const hello3 = new AnotherHelloConcrete();
+    const hello2nd = new HelloHiConcrete();
 
     hello.hello();
     hello2.hello();
