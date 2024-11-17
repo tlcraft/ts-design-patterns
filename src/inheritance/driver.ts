@@ -35,14 +35,14 @@ class HelloHiConcrete extends HelloHiAbs {
 
 const driver = (): void => {
     const hello = new HelloConcrete();
-    const hello2 = new AltHelloConcrete();
-    const hello3 = new AnotherHelloConcrete();
-    const hello2nd = new HelloHiConcrete();
+    const altHello = new AltHelloConcrete();
+    const anotherHello = new AnotherHelloConcrete();
+    const helloHi = new HelloHiConcrete();
 
     hello.hello();
-    hello2.hello();
-    hello3.hello();
-    hello2nd.hello();
+    altHello.hello();
+    anotherHello.hello();
+    helloHi.hello();
 };
 
 driver();
