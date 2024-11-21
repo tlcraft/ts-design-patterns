@@ -4,7 +4,8 @@
     "watch": "npx tsc -w",
     "rules-engine": "npx ts-node src/rules-engine/driver.ts",
     "builder": "npx ts-node src/builder/driver.ts",
-    "composite": "npx ts-node src/composite/driver.ts"
+    "composite": "npx ts-node src/composite/driver.ts",
+    "inheritance": "npx ts-node src/inheritance/driver.ts"
   },
   "devDependencies": {
     "typescript": "^5.6.3"
