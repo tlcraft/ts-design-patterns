@@ -1,37 +1,7 @@
-import { IHello } from "./interfaces/hello";
-
-abstract class BaseHello implements IHello {
-    hello(): void {
-        console.log("Hello");
-    }
-}
-
-abstract class HelloHiAbs extends BaseHello {
-    hello(): void {
-        console.log("Hello, hi!");
-    }
-}
-
-class HelloConcrete extends BaseHello {
-
-}
-
-class AltHelloConcrete extends BaseHello {
-    hello(): void {
-        console.log("Hi");
-    }
-}
-
-class AnotherHelloConcrete extends BaseHello {
-    hello(): void {
-        console.log("Hi, hello.");
-        super.hello();
-    }
-}
-
-class HelloHiConcrete extends HelloHiAbs {
-    
-}
+import { AltHelloConcrete } from "./classes/alternative-hello-concrete";
+import { AnotherHelloConcrete } from "./classes/another-hello-concrete";
+import { HelloConcrete } from "./classes/hello-concrete";
+import { HelloHiConcrete } from "./classes/hello-hi-concrete";
 
 const driver = (): void => {
     const hello = new HelloConcrete();
