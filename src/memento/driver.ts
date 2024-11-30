@@ -1,6 +1,6 @@
 import { StateOriginator } from "./classes/state-originator";
 
-const driver = (): void => {
+const caretakerDriver = (): void => {
     const state = { id: 1234, data: "Initial data" };
     const stateOriginator = new StateOriginator(state);
     console.log('Initial state: ', stateOriginator.state);
@@ -19,4 +19,4 @@ const driver = (): void => {
     console.log('Final state: ', stateOriginator.state);
 };
 
-driver();
+caretakerDriver();
