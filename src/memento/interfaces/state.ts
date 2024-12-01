@@ -1,4 +1,4 @@
 export interface State {
     id: number;
-    data: string;
+    data: Record<string, any>;
 }
