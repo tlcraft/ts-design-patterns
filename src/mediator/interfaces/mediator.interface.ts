@@ -1,5 +1,5 @@
 import { Message } from "./message.interface";
 
-export interface Mediator {
+export interface IMediator {
     notify(message: Message): void;
 }
