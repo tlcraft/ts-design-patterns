@@ -1,3 +1,5 @@
+import { Message } from "./message.interface";
+
 export interface Vehicle {
-    operation: () => void
+    operation: (message: Message) => void;
 }
