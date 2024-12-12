@@ -3,6 +3,6 @@ import { Vehicle } from "../interfaces/vehicle.interface";
 
 export class Airplane implements Vehicle {
     operation = (message: Message) => {
-        console.log('Received message from the helicopter: ', message);
+        console.log('The airplane received a message: ', message);
     };
 }
