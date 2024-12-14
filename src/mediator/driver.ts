@@ -12,6 +12,7 @@ const driver = (): void => {
     };
 
     airTrafficControl.notify(airplane, message);
+    airTrafficControl.notify(helicopter, message);
 };
 
 driver();
