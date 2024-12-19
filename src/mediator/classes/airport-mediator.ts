@@ -19,7 +19,7 @@ export class AirportMediator implements IMediator {
                 break;
             case MessageType.Location:
                 const response = {
-                    data: `${typeof sender} Seattle Tower, roger. Expect runway 1A. Maintain 3,500 feet, and report 5 miles south.`
+                    data: `${sender.constructor.name}, Seattle Tower, roger. Expect runway 1A. Maintain 3,500 feet, and report 5 miles south.`
                 };
                 sender.operation(response);
                 break;
