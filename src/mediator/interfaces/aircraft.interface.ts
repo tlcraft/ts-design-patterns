@@ -1,5 +1,5 @@
 import { Message } from "./message.interface";
 
-export interface Vehicle {
+export interface Aircraft {
     operation: (message: Message) => void;
 }

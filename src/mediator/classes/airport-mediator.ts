@@ -1,12 +1,12 @@
 import { MessageType } from "../enums/message-type.enum";
 import { IMediator } from "../interfaces/mediator.interface";
 import { Message } from "../interfaces/message.interface";
-import { Vehicle } from "../interfaces/vehicle.interface";
+import { Aircraft } from "../interfaces/aircraft.interface";
 
 export class AirportMediator implements IMediator {
-    public constructor(private airplane: Vehicle, private helicopter: Vehicle) {}
+    public constructor(private airplane: Aircraft, private helicopter: Aircraft) {}
 
-    notify(sender: Vehicle, message: Message, messageType: MessageType): void {
+    notify(sender: Aircraft, message: Message, messageType: MessageType): void {
         switch (messageType) {
             case MessageType.Weather:
                 if (sender === this.airplane) {
