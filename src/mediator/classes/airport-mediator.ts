@@ -2,6 +2,7 @@ import { MessageType } from "../enums/message-type.enum";
 import { IMediator } from "../interfaces/mediator.interface";
 import { Message } from "../interfaces/message.interface";
 import { Aircraft } from "../interfaces/aircraft.interface";
+import { AircraftType } from "../enums/aircraft-type.enum";
 
 export class AirportMediator implements IMediator {
     public aircrafts: Record<string, Aircraft> = {};
@@ -14,13 +15,13 @@ export class AirportMediator implements IMediator {
     notify(sender: Aircraft, message: Message, messageType: MessageType): void {
         switch (messageType) {
             case MessageType.Weather:
-                if (sender.constructor.name === 'Airplane') {
-                    const helicopter = this.aircrafts['Helicopter'];
+                if (sender.constructor.name === AircraftType.Airplane) {
+                    const helicopter = this.aircrafts[AircraftType.Helicopter];
                     helicopter.operation(message);
                 }
         
-                if (sender.constructor.name === 'Helicopter') {
-                    const airplane = this.aircrafts['Airplane'];
+                if (sender.constructor.name === AircraftType.Helicopter) {
+                    const airplane = this.aircrafts[AircraftType.Airplane];
                     airplane.operation(message);
                 }
                 break;
@@ -35,13 +36,13 @@ export class AirportMediator implements IMediator {
                     data: `Seattle Tower, roger. ${sender.constructor.name} has updated their coordinates.`
                 };
 
-                if (sender.constructor.name === 'Airplane') {
-                    const helicopter = this.aircrafts['Helicopter'];
+                if (sender.constructor.name === AircraftType.Airplane) {
+                    const helicopter = this.aircrafts[AircraftType.Helicopter];
                     helicopter.operation(updateResponse);
                 }
         
-                if (sender.constructor.name === 'Helicopter') {
-                    const airplane = this.aircrafts['Airplane'];
+                if (sender.constructor.name === AircraftType.Helicopter) {
+                    const airplane = this.aircrafts[AircraftType.Airplane];
                     airplane.operation(updateResponse);
                 }
                 break;
