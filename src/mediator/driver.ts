@@ -4,9 +4,11 @@ import { Helicopter } from "./classes/helicopter";
 import { MessageType } from "./enums/message-type.enum";
 
 const driver = (): void => {
-    const airplane = new Airplane();
+    const airTrafficControl = new AirportMediator();
+    const airplane = new Airplane(airTrafficControl);
     const helicopter = new Helicopter();
-    const airTrafficControl = new AirportMediator(airplane, helicopter);
+    airTrafficControl.addAircraft(airplane);
+    airTrafficControl.addAircraft(helicopter);
 
     const weatherMessage = {
         data: 'METAR KSEA 081853Z 18007KT 10SM OVC013 07/05 A3022 RMK AO2 SLP241 T00720050'
@@ -21,6 +23,8 @@ const driver = (): void => {
 
     airTrafficControl.notify(airplane, postitionMessage, MessageType.Location);
     airTrafficControl.notify(helicopter, postitionMessage, MessageType.Location);
+
+    airplane.updateCoordinates();
 };
 
 driver();
