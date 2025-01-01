@@ -23,10 +23,10 @@ const caretakerDriver = (): void => {
 
     console.log('Final state: ', stateOriginator.state);
 
-    console.log('Mementos: \n')
+    console.log('Mementos: \n');
     mementos.forEach((memento, index) => 
         console.log(`Memento ${index}: `, JSON.stringify(memento))
-    )
+    );
 };
 
 caretakerDriver();
