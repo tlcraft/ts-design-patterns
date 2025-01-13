@@ -28,3 +28,6 @@ Here are several items and the logic for how each should be processed.
 
 - [Design Patterns Rules Engine](https://softwarehut.com/blog/tech/design-patterns-rules-engine)
 - [Rules Engine Pattern](https://deviq.com/design-patterns/rules-engine-pattern)
+- [Rules Engine Design Pattern: A Comprehensive Guide](https://www.nected.ai/blog/rules-engine-design-pattern)
+- [A Rules Engine in 11 Lines of JS](https://drewword.medium.com/a-rules-engine-in-11-lines-of-js-f00d9ea7dae7)
+- [Real-World Rule Engines ](https://www.infoq.com/articles/Rule-Engines/)
